@@ -13,7 +13,10 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const newTask = req.body;
+  const newTask = {
+    id: Date.now(),
+    ...req.body,
+  };
   tasks.push(newTask);
   res.status(201).json(newTask);
 });
