@@ -5,3 +5,33 @@
 body {
   background: #f5c7e1;
 }
+
+button {
+  background-color: #eb61ad;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #222;
+  color: pink;
+}
+
+button:hover > i {
+  color: pink;
+}
+
+button i {
+  pointer-events: none;
+  color: #fff;
+  font-weight: bold;
+}

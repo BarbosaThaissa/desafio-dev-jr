@@ -65,72 +65,61 @@ const HomeComponent: React.FC = () => {
   };
 
   return (
-    <div className="todo-container">
-      <header>
-        <h1>To Do List</h1>
+    <section className="border-b bg-gray-50 max-w-[450px] p-6 rounded-2xl">
+      <header className="text-center pt-0 pr-4 pl-4 pb-4 border-b border-gray-300">
+        <h1 className="font-extrabold text-3xl">To Do List</h1>
       </header>
-      <form id="todo-form">
-        <p>Adicione sua tarefa</p>
-        <div className="form-control">
+      <article className="p-6 border-b border-gray-300">
+        <p className="font-semibold mb-2">Adicione sua tarefa</p>
+        <div className="flex">
           <input
             type="text"
-            id="todo-input"
+            className="pt-1 pb-1 pr-2 pl-2 mr-[6px] border border-gray-800"
             placeholder="O que você vai fazer?"
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
           />
-          <button type="submit">
+          <button onClick={handleCreateTask}>
             <i className="fa-thin fa-plus"></i>
           </button>
         </div>
-      </form>
-      <form id="edit-form" className="hide">
-        <p>Edite sua tarefa</p>
-        <div className="form-control">
-          <input type="text" id="edit-input" />
-          <button type="submit">
-            <i className="fa-solid fa-check-double"></i>
-          </button>
-        </div>
-        <button id="cancel-edit-btn">Cancelar</button>
-      </form>
-      <div id="toolbar">
-        <div id="search">
-          <h4>Pesquisar:</h4>
-          <form>
-            <input type="text" id="search-input" placeholder="Buscar..." />
-            <button id="erase-button">
-              <i className="fa-solid fa-delete-left"></i>
-            </button>
-          </form>
-        </div>
-        <div id="filter">
-          <h4>Filtrar:</h4>
-          <select id="filter-select">
-            <option value="all">Todos</option>
-            <option value="done">Feitos</option>
-            <option value="todo">A fazer</option>
-          </select>
-        </div>
-      </div>
-      <div id="todo-list">
+      </article>
+
+      <article>
         {tasks.map((task) => (
-          <div
+          <section
             key={task.id}
-            style={{
-              textDecoration: task.concluida ? "line-through" : "none",
-            }}
+            className={`flex justify-around items-center p-4 transition-all border-b border-gray-300 ${
+              task.concluida ? "bg-gray-600" : ""
+            } ${task.concluida ? "text-white" : ""}`}
           >
-            <h3>{task.titulo}</h3>
-            <div>
-              <button onClick={() => handleToggleTask(task.id)}>
-                {task.concluida ? "Desfazer" : "Concluir"}
+            <h3
+              className={`
+              ${task.concluida ? "line-through" : "none"} ${
+                task.concluida ? "italic" : ""
+              } flex-1 text-base
+            `}
+            >
+              {task.titulo}
+            </h3>
+            <div className="flex">
+              <button
+                className="ml-2"
+                onClick={() => handleToggleTask(task.id)}
+              >
+                <i className="fa-solid fa-check"></i>
               </button>
-              <button>Editar</button>
-              <button onClick={() => handleDeleteTask(task.id)}>Excluir</button>
+              <button
+                className="ml-2"
+                onClick={() => handleDeleteTask(task.id)}
+              >
+                <i className="fa-solid fa-xmark"></i>
+              </button>
             </div>
-          </div>
+          </section>
         ))}
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
