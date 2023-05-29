@@ -16,8 +16,6 @@
 
 :small_blue_diamond: [Technologies](#-technologies)
 
-:small_blue_diamond: [Prerequisites](#warning-prerequisites)
-
 :small_blue_diamond: [How to run the application](#how-to-run-the-application-arrow_forward)
 
 :small_blue_diamond: [Developers](#developers-octocat)
@@ -78,12 +76,6 @@
 
 <img alt="" src="https://raw.githubusercontent.com/BarbosaThaissa/cine-info/main/src/assests/rainbow-readme.png" />
 
-## :warning: **Prerequisites**
-
-- :warning: [Install Node](https://nodejs.org/en/download/)
-- :warning: [TMDB free key](https://www.themoviedb.org/)
-
-<img alt="" src="https://raw.githubusercontent.com/BarbosaThaissa/cine-info/main/src/assests/rainbow-readme.png" />
 
 ## **How to run the application** :arrow_forward:
 
