@@ -133,8 +133,8 @@ npm run dev
 
 <img alt="" src="https://raw.githubusercontent.com/BarbosaThaissa/cine-info/main/src/assests/rainbow-readme.png" />
 
-**Copyright :copyright: 2023 - Thaissa Barbosa**
+**Copyright :copyright: 2023 - Thaíssa Barbosa**
 
 <img alt="" src="https://raw.githubusercontent.com/BarbosaThaissa/cine-info/main/src/assests/rainbow-readme.png" />
 
-Made with 💜 by myself : [My contact!] [contatothaissabarbosa@gmail.com]
+Made with 💜 by myself: [My contact!] [contatothaissabarbosa@gmail.com]
