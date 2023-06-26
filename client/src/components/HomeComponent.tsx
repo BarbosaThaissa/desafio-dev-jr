@@ -85,6 +85,7 @@ const HomeComponent: React.FC = () => {
         </div>
       </article>
 
+{/*   Tasks renderizadas    */}
       <article>
         {tasks.map((task) => (
           <section
